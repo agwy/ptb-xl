@@ -1,31 +1,36 @@
 # ptb-xl
 
-This repository explores 12-lead ECG data vizually and how it can be modelled for the goal of predicting diagnoses of 'abnormal' signals.
+This repository explores 12-lead ECG data vizually and its usage for modelling diagnoses of 'abnormal' signals.
 
-It uses the large [PTB-XL dataset](https://physionet.org/content/ptb-xl/1.0.2/), described in our Jupyter notebook and in the corresponding paper:
-Wagner, P., Strodthoff, N., Bousseljot, R.-D., Kreiseler, D., Lunze, F.I., Samek, W., Schaeffter, T. (2020), PTB-XL: A Large Publicly Available ECG Dataset. Scientific Data. https://doi.org/10.1038/s41597-020-0495-6
+It uses the large [PTB-XL dataset](https://physionet.org/content/ptb-xl/1.0.2/), described in our Jupyter notebook and in the corresponding paper, source 1 (Wagner et al, 2020).
 
 We proceed as follows:
-1. We perform some a-priori data checks and exploration, vizualizing the 12-lead signal in interactive figures.
-2. We extract wave-related features: r-peaks and related heart-rate, the QRS-complex and visualize these on the figures.
+1. We perform a-priori data checks and exploration, vizualizing the 12-lead signal in interactive figures.
+2. We extract wave-related features: r-peaks and related heart-rate, the QRS-complex and visualize these on the figures. (TODO)
 3. We perform a review of basic ECG theory and some modelling literature with respect to diagnostic classification. Furthermore, we outline multiple objectives to aid (future) ECG diagnostic classification that the current data can be explored for. 
-4. We explore a benchmarking codebase for multilabel dianostic superclass classification, and outline how we would proceed to build on this codebase.
+4. We explore a benchmarking codebase for multilabel diagnostic superclass classification, and outline how we would proceed to build on this codebase.
 
-Putting these in an interactive dashboard with interpretations of why a model suggests a certain diagnostic class would be the end-goal, for a given importance trade-off of different labels, e.g. as in source 2 (Perez Alday et al, 2020).
+The end-goal would be to put these in an interactive dashboard with an interpretations of why a model suggests a certain diagnostic class, for a given importance trade-off of different labels, e.g. as in source 2 (Perez Alday et al, 2020).
 
 ### Usage
 
 The jupyter notebook is intended to be run from google colab. It's recommended to add your google drive to store and load the data and modelling results. Other than that, the notebook should be self-contained but for changing a few paths potentially.
 
-A better step for the future would be to run these from Docker environments, when enough computational resources are present. Fitting the models at the end of the file are not practical from a colab environment intended for interactive use.
+A better step for the future would be to run these from Docker environments. Fitting the models at the end of the file are not practical from a colab environment intended for interactive use.
 
 ### Lessons learned
 
 The dataset has an enormous amount of directions that can be explored for better diagnostic support and treatment. We've described some of those in the jupyter notebook, and any are listed in reference 1. It is large, has rich label annotations in a hierarchy and has repeat measurements on patients.
 
-In this short project we've approached things fairly linearly: get to know the data and basic theory, then explore what has been done, trying some of those things out to get a better feel for the data and the current state-of-the-art. It showcases how I'd start approaching this problem on a longer timeframe. I didn't shoot for new creative idea exploration (e.g. comparing metadata and signals of repeat patient measurements, or comparing label-free clustering/structuring to diagnostic labels).
+#### Approach
 
-Visualizing is fairly straightforward. There are many diagnostic classes however, imbalanced and with their distribution not representative of future use-case data. Extracting r-peaks and QRS-complexes in a robust manner relies on a concensus algorithm between the 12 signals (TODO). We did not test it deeply on our data, which could technically be done with the physician-provided labels of r-peaks, and comparing how accurate they are for particular wave abnormalities, for which we have labels.
+In this short project we've approached things fairly linearly: get to know the data and basic theory. Then we explored what has been done, trying some of those ways out to get a better feel for the data and the current state-of-the-art. It showcases how I'd start approaching this problem on a longer timeframe. I didn't shoot for new creative idea exploration (e.g. comparing metadata and signals of repeat patient measurements, or comparing label-free clustering/structuring to diagnostic labels). 
+
+#### Wave features
+
+Visualizing is fairly straightforward. There are many diagnostic classes however, imbalanced and with their distribution not representative of future use-case data. Extracting r-peaks and QRS-complexes in a robust manner relies on a concensus algorithm between the 12 signals (TODO). We did not test it deeply on our data, which is technically possible with the physician-provided labels of r-peaks, plus comparing how accurate they are for particular labelled wave abnormalities.
+
+##### Multi-label classification
 
 We then started exploring the use of an existing codebase for multi-label classification of diagnostic superclasses (the simplest multilabel problem to start out with), created by (Strodthoff et al, 2021). There are an extensive amount of methods in there, with some supposedly providing interpretations. Getting the codebase to work has been relatively straightforward. We put an emphasis on understanding the code and checking how the steps are performed, so that we can expand on it in a later step. Fitting times are fairly long and don't fit in the scope of our computational resources and timeframe. In that way, we weren't able to reproduce the results of the paper yet.
 
