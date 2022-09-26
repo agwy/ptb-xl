@@ -15,7 +15,7 @@ Putting these in an interactive dashboard with interpretations of why a model su
 
 ### Usage
 
-The jupyter notebook is intended to be run from google colab. It's recommended to add your google drive to store and load the data and modelling results. Other than that, the notebook should be self-contained.
+The jupyter notebook is intended to be run from google colab. It's recommended to add your google drive to store and load the data and modelling results. Other than that, the notebook should be self-contained but for changing a few paths potentially.
 
 A better step for the future would be to run these from Docker environments, when enough computational resources are present. Fitting the models at the end of the file are not practical from a colab environment intended for interactive use.
 
