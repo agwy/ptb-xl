@@ -16,6 +16,8 @@ The end-goal would be to put these in an interactive dashboard with an interpret
 
 The jupyter notebook is intended to be run from google colab. It's recommended to add your google drive to store and load the data and modelling results. Other than that, the notebook should be self-contained but for changing a few paths potentially.
 
+**Note:** To see the interactive figures, the notebook needs to be run in an active python instance.
+
 A better step for the future would be to run these from Docker environments. Fitting the models at the end of the file is not practical from a colab environment intended for interactive use.
 
 ### Lessons learned
