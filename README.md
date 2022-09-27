@@ -58,7 +58,10 @@ There are many references on ECG modelling out there, including several physione
 3. Modelling of PTB-XL for different use-cases:
   - Strodthoff, N., Wagner, P., Schaeffter, T., Samek, W. (2021). "Deep Learning for ECG Analysis: Benchmarks and Insights from PTB-XL". IEEE Journal of Biomedical and Health Informatics 25, no. 5, 1519-1528.
 4. Wave-feature references:
-5. Interpretable multi-label classification:
+  -
+  - Wavelet useage:
+    - https://blog.octo.com/time-series-features-extraction-using-fourier-and-wavelet-transforms-on-ecg-data/
+6. Interpretable multi-label classification:
   - Dongdong Zhang, Samuel Yang, Xiaohui Yuan, Ping Zhang (2021). "Interpretable deep learning for automatic diagnosis of 12-lead electrocardiogram". iScience 24, Issue 4, 2589-0042. https://doi.org/10.1016/j.isci.2021.102373.
 
 Codebases: TODO
