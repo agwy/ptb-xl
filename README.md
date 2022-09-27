@@ -44,10 +44,13 @@ The 12-lead ECG can have many different types of noise and bias (baseline_drift)
 1. PTB-XL data:
   - Wagner, P., Strodthoff, N., Bousseljot, R.-D., Kreiseler, D., Lunze, F.I., Samek, W., Schaeffter, T. (2020), PTB-XL: A Large Publicly Available ECG Dataset. Scientific Data. https://doi.org/10.1038/s41597-020-0495-6
 2. Validation metric and wave feature references:
-  - Perez Alday EA, Gu A, Shah AJ, Robichaux C, Wong AI, Liu C, Liu F, Rad AB, Elola A, Seyedi S, Li Q, Sharma A, Clifford GD, Reyna MA. Classification of 12-lead ECGs: the PhysioNet/Computing in Cardiology Challenge 2020. Physiol Meas. 2020 Nov 11. http://doi.org/10.1088/1361-6579/abc960.
+  - Perez Alday EA, Gu A, Shah AJ, Robichaux C, Wong AI, Liu C, Liu F, Rad AB, Elola A, Seyedi S, Li Q, Sharma A, Clifford GD, Reyna MA (2020). "Classification of 12-lead ECGs: the PhysioNet/Computing in Cardiology Challenge 2020". Physiol Meas. http://doi.org/10.1088/1361-6579/abc960.
 3. Modelling of PTB-XL for different use-cases:
   - Strodthoff, N., Wagner, P., Schaeffter, T., Samek, W. (2021). "Deep Learning for ECG Analysis: Benchmarks and Insights from PTB-XL". IEEE Journal of Biomedical and Health Informatics 25, no. 5, 1519-1528.
 4. Wave-feature references:
 5. Interpretable multi-label classification:
+  - Dongdong Zhang, Samuel Yang, Xiaohui Yuan, Ping Zhang (2021). "Interpretable deep learning for automatic diagnosis of 12-lead electrocardiogram". iScience 24, Issue 4, 2589-0042. https://doi.org/10.1016/j.isci.2021.102373.
+
+Codebases: TODO
 
 See the Jupyter notebook for further references (TODO: input here)
