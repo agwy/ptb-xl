@@ -1,11 +1,11 @@
 # ptb-xl
 
-This repository explores 12-lead ECG data vizually and its usage for modelling diagnoses of 'abnormal' signals.
+This repository explores 12-lead ECG data visually and its usage for modelling diagnoses of 'abnormal' signals.
 
 It uses the large [PTB-XL dataset](https://physionet.org/content/ptb-xl/1.0.2/), described in our Jupyter notebook and in the corresponding paper, source 1 (Wagner et al, 2020).
 
 We proceed as follows:
-1. We perform a-priori data checks and exploration, vizualizing the 12-lead signal in interactive figures.
+1. We perform a-priori data checks and exploration, visualizing the 12-lead signal in interactive figures.
 2. We extract wave-related features: r-peaks and related heart-rate, the QRS-complex and visualize these on the figures. (TODO)
 3. We perform a review of basic ECG theory and some modelling literature with respect to diagnostic classification. Furthermore, we outline multiple objectives to aid (future) ECG diagnostic classification that the current data can be explored for. 
 4. We explore a benchmarking codebase for multilabel diagnostic superclass classification, and outline how we would proceed to build on this codebase.
